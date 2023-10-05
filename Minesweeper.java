@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 /*
 * Faible chance de réussite (proche de 5%)
 * Compliqué de faire mieux
-* Le site retourne "timeout!" fréquement, j'imagine que l'orienté object fais que l'algo est trop lent ...
+* Le site retourne "timeout!" fréquement, j'imagine que l'orienté object fais que l'algo est trop lent ... (edit : remplacer le premier move par une valeur plus proche de "0 0";)
 */
 class Player {
     public static final String regex = "^[1-8]$";
@@ -28,7 +28,7 @@ class Player {
             tableauCase = recupererTableau();
             if(firstMove){
                 firstMove = false;
-                System.out.println(0 + " " + row/2);
+                System.out.println(3 + " " + 3);
             }else{
                 analyseNeighbors(tableauCase);
                 tableauBomb.addAll(trouverLesBombes(tableauCase));
